@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu_Utama">
+    <property name="title">
+     <string>Menu Utama</string>
+    </property>
+    <addaction name="actionAdvertiser"/>
+    <addaction name="actionIklan"/>
+    <addaction name="actionPenyiaran"/>
+    <addaction name="actionBiaya_Iklan"/>
+   </widget>
+   <addaction name="menuMenu_Utama"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdvertiser">
+   <property name="text">
+    <string>Advertiser</string>
+   </property>
+  </action>
+  <action name="actionBiaya_Iklan">
+   <property name="text">
+    <string>Biaya Iklan</string>
+   </property>
+  </action>
+  <action name="actionIklan">
+   <property name="text">
+    <string>Iklan</string>
+   </property>
+  </action>
+  <action name="actionPenyiaran">
+   <property name="text">
+    <string>Penyiaran</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

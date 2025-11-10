@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>70</y>
+     <width>401</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="iDSiaranLabel">
+      <property name="text">
+       <string>ID Siaran</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="iDSiarLineEdit"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="kodeIklanLabel">
+      <property name="text">
+       <string>Kode Iklan</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="kodeIklanLineEdit"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="produkLabel">
+      <property name="text">
+       <string>Produk</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="produkLineEdit"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="periodeLabel">
+      <property name="text">
+       <string>Periode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="airTimeLabel">
+      <property name="text">
+       <string>Air Time</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="airTimeLineEdit"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="tglMulaiLabel">
+      <property name="text">
+       <string>Tgl Mulai</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="tglMulaiLineEdit"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="tglSelesaiLabel">
+      <property name="text">
+       <string>Tgl Selesai</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="tglSelesaiLineEdit"/>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="periodeLineEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>400</y>
+     <width>631</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID Siaran</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Kode Iklan</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Produk</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Periode</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Air Time</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tgl Mulai</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tgl Selesai</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>302</x>
+     <y>30</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Penyiaran</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="simpanButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>340</y>
+     <width>90</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Simpan</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ubahButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>340</y>
+     <width>90</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ubah</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="hapusButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>340</y>
+     <width>90</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hapus</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
