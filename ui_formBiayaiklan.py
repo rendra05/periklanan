@@ -155,6 +155,9 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(10, 470, 601, 192))
+        self.cetakButton = QPushButton(Form)
+        self.cetakButton.setObjectName(u"cetakButton")
+        self.cetakButton.setGeometry(QRect(150, 410, 90, 29))
 
         self.retranslateUi(Form)
 
@@ -194,5 +197,6 @@ class Ui_Form(object):
         ___qtablewidgetitem7.setText(QCoreApplication.translate("Form", u"Total bayar", None));
         ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("Form", u"Terbilang", None));
+        self.cetakButton.setText(QCoreApplication.translate("Form", u"Cetak", None))
     # retranslateUi
 

@@ -222,6 +222,19 @@
     </property>
    </column>
   </widget>
+  <widget class="QPushButton" name="cetakButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>410</y>
+     <width>90</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cetak</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
