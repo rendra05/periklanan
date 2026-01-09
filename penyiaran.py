@@ -17,18 +17,21 @@ class FormPenyiaran(QWidget):
         self.setLayout(self.form.layout())
         self.setWindowTitle("Form Penyiaran")
 
-        self.db = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="periklanan"
-        )
-        self.cursor = self.db.cursor()
+        try:
+            self.db = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="periklanan"
+            )
+            self.cursor = self.db.cursor()
+        except mysql.connector.Error as e:
+            QMessageBox.critical(self, "Error", str(e))
+            return
 
         self.form.simpanButton.clicked.connect(self.simpan_data)
         self.form.ubahButton.clicked.connect(self.ubah_data)
         self.form.hapusButton.clicked.connect(self.hapus_data)
-
         self.form.tableWidget.cellClicked.connect(self.isi_form_dari_tabel)
 
         self.tampilkan_data()
@@ -37,10 +40,12 @@ class FormPenyiaran(QWidget):
         if not self.form.iDSiarLineEdit.text().strip():
             QMessageBox.warning(self, "Peringatan", "ID Siar wajib diisi")
             return False
-
+        return True
 
     def tampilkan_data(self):
-        self.cursor.execute("SELECT * FROM penyiaran")
+        self.cursor.execute(
+            "SELECT id_siar, kd_iklan, produk, periode, air_time, tgl_mulai, tgl_selesai FROM penyiaran"
+        )
         hasil = self.cursor.fetchall()
         self.form.tableWidget.setRowCount(0)
 
@@ -62,7 +67,6 @@ class FormPenyiaran(QWidget):
         self.form.tglMulaiLineEdit.setText(self.form.tableWidget.item(row, 5).text())
         self.form.tglSelesaiLineEdit.setText(self.form.tableWidget.item(row, 6).text())
 
-
     def simpan_data(self):
         if not self.validasi_input():
             return
@@ -75,7 +79,7 @@ class FormPenyiaran(QWidget):
             )
 
             val = (
-                self.form.idSiarLineEdit.text(),
+                self.form.iDSiarLineEdit.text(),
                 self.form.kodeIklanLineEdit.text(),
                 self.form.produkLineEdit.text(),
                 self.form.periodeLineEdit.text(),
@@ -97,7 +101,7 @@ class FormPenyiaran(QWidget):
             QMessageBox.critical(self, "Error", str(e))
 
     def ubah_data(self):
-        id_siar = self.form.idSiarLineEdit.text().strip()
+        id_siar = self.form.iDSiarLineEdit.text().strip()
 
         if not id_siar:
             QMessageBox.warning(self, "Peringatan", "Pilih data yang ingin diubah")
@@ -126,7 +130,7 @@ class FormPenyiaran(QWidget):
         self.kosongkan_form()
 
     def hapus_data(self):
-        id_siar = self.form.idSiarLineEdit.text().strip()
+        id_siar = self.form.iDSiarLineEdit.text().strip()
 
         if not id_siar:
             QMessageBox.warning(self, "Peringatan", "Pilih data yang ingin dihapus")
@@ -143,7 +147,7 @@ class FormPenyiaran(QWidget):
         self.kosongkan_form()
 
     def kosongkan_form(self):
-        self.form.idSiarLineEdit.clear()
+        self.form.iDSiarLineEdit.clear()
         self.form.kodeIklanLineEdit.clear()
         self.form.produkLineEdit.clear()
         self.form.periodeLineEdit.clear()
